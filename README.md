@@ -75,9 +75,22 @@ DHT is the general Library for
 -	Wire.h
 
  
-Libraries
+ Libraries
 -	IRremote.h 
 https://github.com/Arduino-IRremote/Arduino-IRremote/releases
 -	LiquidCrystal_I2C.h
 -	Wire.h
 -	dht.h
+
+Work Citations (Resources)
+Arduino mega I2C LCD TUTORIAL. (2019, October 02). Retrieved April 18, 2021, from https://www.youtube.com/watch?v=9Zb9Ywj-4Xg
+BorisD23, & Instructables. (2018, June 06). DIY Arduino RGB led STRIP IR Controller. Retrieved April 18, 2021, from https://www.instructables.com/DIY-Arduino-RGB-LED-Strip-IR-Controller/
+Cooler master FAQ. (n.d.). Retrieved April 18, 2021, from https://landing.coolermaster.com/faq/3-pin-and-4-pin-fan-wire-diagrams/
+Dusnoki. (2018, February 25). DIY Arduino Rgb 12v led STRIP IR Controller PCB design, build, Soldering, programming guide. Retrieved April 18, 2021, from https://www.youtube.com/watch?v=upuhM59AFPk
+How to connect an I2C lcd display to an arduino MEGA 2560. (2018, January 13). Retrieved April 18, 2021, from https://www.youtube.com/watch?v=B8DNokj9LnY
+How to set up THE dht11 humidity sensor on an Arduino. (2020, July 15). Retrieved April 18, 2021, from https://www.circuitbasics.com/how-to-set-up-the-dht11-humidity-sensor-on-an-arduino/
+System. (2011, January 19). Can I use THE powerpins to power my Arduino? Retrieved April 18, 2021, from https://forum.arduino.cc/index.php?topic=22676.0
+Verdelj, & Instructables. (2017, October 23). I2C LCD controller (the easy way). Retrieved April 18, 2021, from https://www.instructables.com/I2C-LCD-Controller-the-easy-way/
+VirusTotal. (n.d.). Retrieved April 18, 2021, from https://www.virustotal.com/gui/file/62e625ff93a5f5c6954439c504ceeed7a4e107e27085bbb931238c167cb8e137/detection
+
+
