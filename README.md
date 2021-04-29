@@ -19,7 +19,6 @@ Software: Arduino 1.9.0 beta
 https://www.arduino.cc/en/software 
 
 
-
 List of Libraries
 -	IRremote .h
 -	LiquidCrystal_I2C.h
@@ -40,19 +39,19 @@ Steps:
 11. After connect everything is connected correctly and that the device is working 
 
 
-
 Tips when building
 1.	Build and test the LED and IR sensor 1st this can take a while to make sure it is working. 
 2.	Build and test the LCD display, temperature sensor and fan. This does will not take long as long as you have IIC I2c adapter because this will simplify the circuit down and you will not need as may resistors and the LCD Display will connect much quicker
 3.	Note that the two batteries are used for only the fan and LED strip. 
 4.	Depending the on the Fan is used depends on which wires are the ground, power, and possibly single. In this case the speed is depended on the
 
-References Links used to help connect everything:
+
 RGB Strip
 -	https://www.instructables.com/DIY-Arduino-RGB-LED-Strip-IR-Controller/ 
 -	https://www.youtube.com/watch?v=upuhM59AFPk 
 
 LCD Screen 
+
 -	 https://www.youtube.com/watch?v=9Zb9Ywj-4Xg
 -	https://www.youtube.com/watch?v=B8DNokj9LnY
 -	https://www.instructables.com/I2C-LCD-Controller-the-easy-way/ 
@@ -61,11 +60,14 @@ Temperature Sensor
 -	https://forum.arduino.cc/t/dht-celsius-to-fahrenheit-conversion/167330/4 
 
 Connecting DC Fan
+
 -	https://circuitdigest.com/microcontroller-projects/automatic-temperature-controlled-fan-project
 -	https://landing.coolermaster.com/faq/3-pin-and-4-pin-fan-wire-diagrams/
 About the Arduino Board
 -	https://forum.arduino.cc/index.php?topic=22676.0 
+
 About Library
+
 -	IRremote .h
 https://github.com/Arduino-IRremote/Arduino-IRremote/releases
 -	LiquidCrystal_I2C.h
@@ -76,6 +78,7 @@ DHT is the general Library for
 
  
  Libraries
+ 
 -	IRremote.h 
 https://github.com/Arduino-IRremote/Arduino-IRremote/releases
 -	LiquidCrystal_I2C.h
@@ -83,14 +86,23 @@ https://github.com/Arduino-IRremote/Arduino-IRremote/releases
 -	dht.h
 
 Work Citations (Resources)
+
 Arduino mega I2C LCD TUTORIAL. (2019, October 02). Retrieved April 18, 2021, from https://www.youtube.com/watch?v=9Zb9Ywj-4Xg
+
 BorisD23, & Instructables. (2018, June 06). DIY Arduino RGB led STRIP IR Controller. Retrieved April 18, 2021, from https://www.instructables.com/DIY-Arduino-RGB-LED-Strip-IR-Controller/
+
 Cooler master FAQ. (n.d.). Retrieved April 18, 2021, from https://landing.coolermaster.com/faq/3-pin-and-4-pin-fan-wire-diagrams/
+
 Dusnoki. (2018, February 25). DIY Arduino Rgb 12v led STRIP IR Controller PCB design, build, Soldering, programming guide. Retrieved April 18, 2021, from https://www.youtube.com/watch?v=upuhM59AFPk
+
 How to connect an I2C lcd display to an arduino MEGA 2560. (2018, January 13). Retrieved April 18, 2021, from https://www.youtube.com/watch?v=B8DNokj9LnY
+
 How to set up THE dht11 humidity sensor on an Arduino. (2020, July 15). Retrieved April 18, 2021, from https://www.circuitbasics.com/how-to-set-up-the-dht11-humidity-sensor-on-an-arduino/
+
 System. (2011, January 19). Can I use THE powerpins to power my Arduino? Retrieved April 18, 2021, from https://forum.arduino.cc/index.php?topic=22676.0
+
 Verdelj, & Instructables. (2017, October 23). I2C LCD controller (the easy way). Retrieved April 18, 2021, from https://www.instructables.com/I2C-LCD-Controller-the-easy-way/
+
 VirusTotal. (n.d.). Retrieved April 18, 2021, from https://www.virustotal.com/gui/file/62e625ff93a5f5c6954439c504ceeed7a4e107e27085bbb931238c167cb8e137/detection
 
 
