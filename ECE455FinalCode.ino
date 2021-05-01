@@ -186,11 +186,19 @@ void sendColor()
 void loop() {
   // put your main code here, to run repeatedly:
   lcd.backlight();
-  fanControl();
+  unsigned long currentMillis = millis(); // check for a code from the remote every 100 milliseconds
+  lcd.setCursor(0, 0);
+fanControl();
   lcd.setCursor(0, 1);
   lcd.print("Humidity: ");
   lcd.print(DHT.humidity);
   lcd.print("%");
+   if (currentMillis - previousMillis >= 100) {
+      previousMillis = currentMillis;
+     findCode();
+    } 
+    
+    
   delay(2000);
   
   
@@ -229,21 +237,20 @@ void fanControl() {
   DHT.read11(DHT11_PIN);
   int temp = DHT.temperature;
   int Temp = DHT.temperature *1.8+32 ;
-  lcd.setCursor(0, 0);
+  
   lcd.print("Temp:");
   lcd.print(Temp );   // Printing temperature on LCD
   lcd.write(1);
   lcd.print("F");
-  lcd.setCursor(0, 1);
-  unsigned long currentMillis = millis(); // check for a code from the remote every 100 milliseconds
+  lcd.setCursor(0, 1);  
+  
+ 
   if (temp < 25 )
   {
     analogWrite(5, 0);
     lcd.print("Fan OFF            ");
-    if (currentMillis - previousMillis >= 100) {
-      previousMillis = currentMillis;
-     findCode();
-    }
+   setColor(randomColor);
+   sendColor();
     delay(100);
   }
 
@@ -252,6 +259,7 @@ void fanControl() {
     analogWrite(fan, 51);
     lcd.print("Fan Speed: 20%   ");
     setColor(BLUE_LIGHT_COLOR);
+    sendColor();
     delay(100);
   }
 
@@ -260,6 +268,7 @@ void fanControl() {
     analogWrite(fan, 102);
     lcd.print("Fan Speed: 40%   ");
     setColor(TEAL_COLOR);
+    sendColor();
     delay(100);
   }
 
@@ -268,6 +277,7 @@ void fanControl() {
     analogWrite(fan, 153);
     lcd.print("Fan Speed: 60%   ");
     setColor(GREEN_COLOR);
+    sendColor();
     delay(100);
   }
 
@@ -276,6 +286,7 @@ void fanControl() {
     analogWrite(fan, 204);
     lcd.print("Fan Speed: 80%    ");
     setColor(PINK_COLOR);
+    sendColor();
     delay(100);
   }
   else if (temp > 28)
@@ -283,6 +294,7 @@ void fanControl() {
     analogWrite(fan, 255);
     lcd.print("Fan Speed: 100%   ");
     setColor(RED_COLOR);
+    sendColor();
     delay(100);
   }
   delay(3000);
