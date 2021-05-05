@@ -186,18 +186,14 @@ void sendColor()
 void loop() {
   // put your main code here, to run repeatedly:
   lcd.backlight();
-  unsigned long currentMillis = millis(); // check for a code from the remote every 100 milliseconds
+  
   lcd.setCursor(0, 0);
 fanControl();
   lcd.setCursor(0, 1);
   lcd.print("Humidity: ");
   lcd.print(DHT.humidity);
   lcd.print("%");
-   if (currentMillis - previousMillis >= 100) {
-      previousMillis = currentMillis;
-     findCode();
-    } 
-    
+  
     
   delay(2000);
   
@@ -237,7 +233,7 @@ void fanControl() {
   DHT.read11(DHT11_PIN);
   int temp = DHT.temperature;
   int Temp = DHT.temperature *1.8+32 ;
-  
+  unsigned long currentMillis = millis(); // check for a code from the remote every 100 milliseconds
   lcd.print("Temp:");
   lcd.print(Temp );   // Printing temperature on LCD
   lcd.write(1);
@@ -249,8 +245,11 @@ void fanControl() {
   {
     analogWrite(5, 0);
     lcd.print("Fan OFF            ");
-   setColor(randomColor);
-   sendColor();
+    if (currentMillis - previousMillis >= 100) {
+      previousMillis = currentMillis;
+     findCode();
+    } 
+    
     delay(100);
   }
 
